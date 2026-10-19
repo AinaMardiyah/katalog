@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Katalog Laptop - Hardware Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Header & Navigasi -->
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-laptop-code"></i> TechCatalog
+    </div>
+    <div class="controls">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="searchInput" placeholder="Cari laptop...">
+      </div>
+      <button id="themeToggle" class="btn-icon" title="Ubah Mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+      <button id="cartBtn" class="btn-icon" title="Keranjang">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cartBadge" class="badge">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Filter & Switcher Layout -->
+  <main class="container">
+    <div class="toolbar">
+      <div class="brand-filter">
+        <button class="filter-btn active" data-brand="all">Semua</button>
+        <button class="filter-btn" data-brand="lenovo">Lenovo</button>
+        <button class="filter-btn" data-brand="macbook">MacBook</button>
+        <button class="filter-btn" data-brand="asus">Asus</button>
+      </div>
+
+      <div class="layout-selector">
+        <label for="layoutSelect"><i class="fa-solid fa-grip"></i> Tata Letak:</label>
+        <select id="layoutSelect">
+          <option value="layout-1">1. Standard Horizontal Row</option>
+          <option value="layout-2">2. Compact Cards Row</option>
+          <option value="layout-3">3. Large Banner Track</option>
+          <option value="layout-4">4. Horizontal List Strip</option>
+          <option value="layout-5">5. Staggered Height Row</option>
+          <option value="layout-6">6. Minimal Pill Row</option>
+          <option value="layout-7">7. Two-Row Scroll Track</option>
+          <option value="layout-8">8. Modern Carousel Style</option>
+          <option value="layout-9">9. Highlight Feature Row</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Container Katalog Utama -->
+    <section id="catalogContainer" class="catalog-wrapper layout-1">
+      <!-- Konten digenerate via JavaScript -->
+    </section>
+  </main>
+
+  <!-- Drawer Keranjang Belanja -->
+  <div id="cartDrawer" class="drawer">
+    <div class="drawer-header">
+      <h3><i class="fa-solid fa-cart-shopping"></i> Keranjang Belanja</h3>
+      <button id="closeCart" class="btn-close">&times;</button>
+    </div>
+    <div id="cartItems" class="drawer-body">
+      <!-- Item keranjang dimasukkan via JS -->
+    </div>
+    <div class="drawer-footer">
+      <div class="total-price">
+        <span>Total:</span>
+        <span id="cartTotal">Rp 0</span>
+      </div>
+      <button id="checkoutBtn" class="btn-checkout">Checkout Sekarang</button>
+    </div>
+  </div>
+
+  <!-- Modal Detail Produk -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="closeModal" class="btn-close">&times;</button>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <div id="overlay" class="overlay"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
